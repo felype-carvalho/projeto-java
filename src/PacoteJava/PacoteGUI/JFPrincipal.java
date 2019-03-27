@@ -42,6 +42,7 @@ public class JFPrincipal extends javax.swing.JFrame {
 
         btnFuncionario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJava/PacoteGUI/imagens/funcionario.png"))); // NOI18N
+        btnFuncionario.setMnemonic('F');
         btnFuncionario.setText("Funcionário");
         btnFuncionario.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnFuncionario.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -53,30 +54,35 @@ public class JFPrincipal extends javax.swing.JFrame {
 
         btnFornecedores.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnFornecedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJava/PacoteGUI/imagens/fornecedores.png"))); // NOI18N
+        btnFornecedores.setMnemonic('s');
         btnFornecedores.setText("Fornecedores");
         btnFornecedores.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnFornecedores.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         btnCaixa.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnCaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJava/PacoteGUI/imagens/caixa.png"))); // NOI18N
+        btnCaixa.setMnemonic('C');
         btnCaixa.setText("Caixa");
         btnCaixa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCaixa.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         btnProdutos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJava/PacoteGUI/imagens/produtos.png"))); // NOI18N
+        btnProdutos.setMnemonic('P');
         btnProdutos.setText("Produtos");
         btnProdutos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnProdutos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         btnUsuarios.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJava/PacoteGUI/imagens/usuarios.png"))); // NOI18N
+        btnUsuarios.setMnemonic('U');
         btnUsuarios.setText("Usuários");
         btnUsuarios.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnUsuarios.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         btnImpressao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnImpressao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJava/PacoteGUI/imagens/impressao.png"))); // NOI18N
+        btnImpressao.setMnemonic('I');
         btnImpressao.setText("Impressão");
         btnImpressao.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnImpressao.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -116,7 +122,7 @@ public class JFPrincipal extends javax.swing.JFrame {
                             .addComponent(btnProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(btnUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -126,7 +132,7 @@ public class JFPrincipal extends javax.swing.JFrame {
                                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(btnFornecedores, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
-                                .addComponent(btnCaixa, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(btnCaixa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(90, 90, 90))
         );
@@ -135,19 +141,21 @@ public class JFPrincipal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(52, 52, 52)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnFornecedores, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnFornecedores, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnImpressao, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnVoltar))
                     .addComponent(btnCaixa, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnImpressao, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnVoltar)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         jLabel1.getAccessibleContext().setAccessibleDescription("");
