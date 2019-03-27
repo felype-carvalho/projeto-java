@@ -51,12 +51,16 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(164, 164, 164));
 
+        jButton1.setMnemonic('C');
         jButton1.setText("Cadastro");
 
+        jButton2.setMnemonic('A');
         jButton2.setText("Alterar");
 
+        jButton3.setMnemonic('E');
         jButton3.setText("Excluir");
 
+        jButton4.setMnemonic('P');
         jButton4.setText("Pesquisar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,6 +68,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setMnemonic('V');
         jButton5.setText("Voltar");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
