@@ -36,7 +36,7 @@ public class JFPrincipal extends javax.swing.JFrame {
         btnVoltar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("System ABC - Menu Principal");
         setResizable(false);
 
@@ -72,6 +72,11 @@ public class JFPrincipal extends javax.swing.JFrame {
         btnProdutos.setText("Produtos");
         btnProdutos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnProdutos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProdutosActionPerformed(evt);
+            }
+        });
 
         btnUsuarios.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJava/PacoteGUI/imagens/usuarios.png"))); // NOI18N
@@ -173,9 +178,17 @@ public class JFPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnImpressaoActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
+        JFLogin back = new JFLogin();
+        back.setVisible(true);
+        this.setVisible(false);
+        
     }//GEN-LAST:event_btnVoltarActionPerformed
+
+    private void btnProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProdutosActionPerformed
+        JFGerenciarProdutos open = new JFGerenciarProdutos();
+        open.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnProdutosActionPerformed
 
     /**
      * @param args the command line arguments
