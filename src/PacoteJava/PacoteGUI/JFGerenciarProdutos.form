@@ -267,6 +267,9 @@
         <Component class="javax.swing.JTextField" name="txtCategory">
         </Component>
         <Component class="javax.swing.JTextField" name="txtPrice">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="$"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
