@@ -5,10 +5,7 @@
  */
 package PacoteJava.PacoteGUI;
 
-/**
- *
- * @author LABORATORIO_INFO
- */
+
 public class Pessoa {
     
 }
