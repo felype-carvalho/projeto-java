@@ -5,10 +5,7 @@
  */
 package PacoteJava.PacoteGUI;
 
-/**
- *
- * @author LABORATORIO_INFO
- */
+
 public class Usuario {
 
     private String nome;
@@ -16,16 +13,13 @@ public class Usuario {
     private String login;
     private String senha;
 
-    public Usuario() {
-    }
-
     public Usuario(String nome) {
         this.nome = nome;
     }
 
-    public Usuario(String nome, String email) {
-        this.nome = nome;
-        this.email = email;
+    public Usuario(String login, String senha) {
+        this.login = login;
+        this.senha = senha;
     }
 
     public Usuario(String nome, String email, String login, String senha) {
@@ -34,7 +28,7 @@ public class Usuario {
         this.login = login;
         this.senha = senha;
     }
-
+    
     public String getNome() {
         return nome;
     }
@@ -66,5 +60,8 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
+    
+
 
 }
