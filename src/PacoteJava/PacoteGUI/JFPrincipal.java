@@ -58,6 +58,11 @@ public class JFPrincipal extends javax.swing.JFrame {
         btnFornecedores.setText("Fornecedores");
         btnFornecedores.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnFornecedores.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnFornecedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFornecedoresActionPerformed(evt);
+            }
+        });
 
         btnCaixa.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnCaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJava/PacoteGUI/imagens/caixa.png"))); // NOI18N
@@ -65,6 +70,11 @@ public class JFPrincipal extends javax.swing.JFrame {
         btnCaixa.setText("Caixa");
         btnCaixa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCaixa.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnCaixa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCaixaActionPerformed(evt);
+            }
+        });
 
         btnProdutos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJava/PacoteGUI/imagens/produtos.png"))); // NOI18N
@@ -84,6 +94,11 @@ public class JFPrincipal extends javax.swing.JFrame {
         btnUsuarios.setText("Usuários");
         btnUsuarios.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnUsuarios.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnUsuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUsuariosActionPerformed(evt);
+            }
+        });
 
         btnImpressao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnImpressao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJava/PacoteGUI/imagens/impressao.png"))); // NOI18N
@@ -170,18 +185,21 @@ public class JFPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFuncionarioActionPerformed
-        // TODO add your handling code here:
+        JFGerenreciarFuncionario open = new JFGerenreciarFuncionario();
+        open.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnFuncionarioActionPerformed
 
     private void btnImpressaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImpressaoActionPerformed
-        // TODO add your handling code here:
+        JFImpressao open = new JFImpressao();
+        open.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnImpressaoActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         JFLogin back = new JFLogin();
         back.setVisible(true);
-        this.setVisible(false);
-        
+        this.setVisible(false);        
     }//GEN-LAST:event_btnVoltarActionPerformed
 
     private void btnProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProdutosActionPerformed
@@ -189,6 +207,24 @@ public class JFPrincipal extends javax.swing.JFrame {
         open.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnProdutosActionPerformed
+
+    private void btnFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFornecedoresActionPerformed
+        JFFornecedor open = new JFFornecedor();
+        open.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnFornecedoresActionPerformed
+
+    private void btnUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuariosActionPerformed
+        JFUser open = new JFUser();
+        open.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnUsuariosActionPerformed
+
+    private void btnCaixaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCaixaActionPerformed
+        JFCaixa open = new JFCaixa();
+        open.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnCaixaActionPerformed
 
     /**
      * @param args the command line arguments

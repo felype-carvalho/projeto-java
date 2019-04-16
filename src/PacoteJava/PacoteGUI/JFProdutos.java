@@ -9,12 +9,12 @@ package PacoteJava.PacoteGUI;
  *
  * @author LABORATORIO_INFO
  */
-public class JFGerenreciarFuncionario extends javax.swing.JFrame {
+public class JFProdutos extends javax.swing.JFrame {
 
     /**
-     * Creates new form JFGerenreciarFuncionario
+     * Creates new form JFProdutos
      */
-    public JFGerenreciarFuncionario() {
+    public JFProdutos() {
         initComponents();
     }
 
@@ -30,6 +30,7 @@ public class JFGerenreciarFuncionario extends javax.swing.JFrame {
         btnBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Produtos");
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -45,12 +46,12 @@ public class JFGerenreciarFuncionario extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnBack)
-                .addContainerGap(623, Short.MAX_VALUE))
+                .addContainerGap(591, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(413, Short.MAX_VALUE)
+                .addContainerGap(362, Short.MAX_VALUE)
                 .addComponent(btnBack)
                 .addContainerGap())
         );
@@ -60,9 +61,7 @@ public class JFGerenreciarFuncionario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        JFPrincipal open = new JFPrincipal();
-        open.setVisible(true);
-        this.setVisible(false);
+        // TODO add your handling code here:
     }//GEN-LAST:event_btnBackActionPerformed
 
     /**
@@ -82,20 +81,20 @@ public class JFGerenreciarFuncionario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFGerenreciarFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFGerenreciarFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFGerenreciarFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFGerenreciarFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFGerenreciarFuncionario().setVisible(true);
+                new JFProdutos().setVisible(true);
             }
         });
     }
