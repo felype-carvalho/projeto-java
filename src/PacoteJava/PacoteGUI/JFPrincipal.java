@@ -70,11 +70,6 @@ public class JFPrincipal extends javax.swing.JFrame {
         btnCaixa.setText("Caixa");
         btnCaixa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCaixa.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnCaixa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCaixaActionPerformed(evt);
-            }
-        });
 
         btnProdutos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJava/PacoteGUI/imagens/produtos.png"))); // NOI18N
@@ -217,14 +212,8 @@ public class JFPrincipal extends javax.swing.JFrame {
     private void btnUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuariosActionPerformed
         JFUser open = new JFUser();
         open.setVisible(true);
-        this.setVisible(false);
+//        this.setVisible(false);
     }//GEN-LAST:event_btnUsuariosActionPerformed
-
-    private void btnCaixaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCaixaActionPerformed
-        JFCaixa open = new JFCaixa();
-        open.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnCaixaActionPerformed
 
     /**
      * @param args the command line arguments
