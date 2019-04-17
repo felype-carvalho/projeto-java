@@ -270,7 +270,6 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
 
     private void btnNew1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNew1ActionPerformed
         txtName.setEnabled(true);
-        txtName.setFocusable(true);
         txtCode.setEnabled(true);
         txtCategory.setEnabled(true);
         txtPrice.setEnabled(true);
