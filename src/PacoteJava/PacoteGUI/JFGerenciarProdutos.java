@@ -19,6 +19,10 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
     public JFGerenciarProdutos() {
         initComponents();
         btnRegister.setEnabled(false); 
+        txtName.setEnabled(false);
+        txtCode.setEnabled(false);
+        txtCategory.setEnabled(false);
+        txtPrice.setEnabled(false);
     }
 
     /**
@@ -89,7 +93,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
 
         btnNew1.setMnemonic('C');
         btnNew1.setText("Novo");
-        btnNew1.setToolTipText("");
+        btnNew1.setToolTipText("papaapap");
         btnNew1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnNew1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -245,6 +249,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         JFPrincipal open = new JFPrincipal();
         open.setVisible(true);
         this.setVisible(false);
+
         
     }//GEN-LAST:event_btnBackActionPerformed
 
@@ -264,7 +269,11 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNameActionPerformed
 
     private void btnNew1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNew1ActionPerformed
-        // TODO add your handling code here:
+        txtName.setEnabled(true);
+        txtName.setFocusable(true);
+        txtCode.setEnabled(true);
+        txtCategory.setEnabled(true);
+        txtPrice.setEnabled(true);
         btnRegister.setEnabled(true);
     }//GEN-LAST:event_btnNew1ActionPerformed
 
