@@ -188,8 +188,13 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
             }
         });
 
-        txtPrice.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        try {
+            txtPrice.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("R$ ###,##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
         txtPrice.setFocusCycleRoot(true);
+        txtPrice.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         txtPrice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPriceActionPerformed(evt);
