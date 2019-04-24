@@ -21,7 +21,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         btnRegister.setEnabled(false); 
         txtName.setEnabled(false);
         txtCode.setEnabled(false);
-        txtCategory.setEnabled(false);
+        //txtCategory.setEnabled(false);
         txtPrice.setEnabled(false);
     }
 
@@ -50,19 +50,22 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
         txtCode = new javax.swing.JTextField();
-        txtCategory = new javax.swing.JTextField();
-        txtPrice = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        txtPrice = new javax.swing.JFormattedTextField();
 
         jRadioButton1.setText("jRadioButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel4.setBackground(new java.awt.Color(164, 164, 164));
+        jPanel4.setFocusCycleRoot(true);
 
         btnRegister.setMnemonic('C');
         btnRegister.setText("Cadastrar");
         btnRegister.setToolTipText("");
         btnRegister.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnRegister.setFocusCycleRoot(true);
         btnRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegisterActionPerformed(evt);
@@ -71,12 +74,15 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
 
         jButton2.setMnemonic('A');
         jButton2.setText("Alterar");
+        jButton2.setFocusCycleRoot(true);
 
         jButton3.setMnemonic('E');
         jButton3.setText("Excluir");
+        jButton3.setFocusCycleRoot(true);
 
         jButton4.setMnemonic('P');
         jButton4.setText("Pesquisar");
+        jButton4.setFocusCycleRoot(true);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -85,6 +91,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
 
         btnBack.setMnemonic('V');
         btnBack.setText("Voltar");
+        btnBack.setFocusCycleRoot(true);
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -95,6 +102,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         btnNew1.setText("Novo");
         btnNew1.setToolTipText("papaapap");
         btnNew1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnNew1.setFocusCycleRoot(true);
         btnNew1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNew1ActionPerformed(evt);
@@ -129,13 +137,14 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 192, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 215, Short.MAX_VALUE)
                 .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35))
         );
 
         jPanel1.setBackground(new java.awt.Color(164, 164, 164));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Produtos Cadastrados", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 20))); // NOI18N
+        jPanel1.setFocusCycleRoot(true);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -151,6 +160,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(164, 164, 164));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gerenciamento de Produto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 20))); // NOI18N
         jPanel2.setToolTipText("");
+        jPanel2.setFocusCycleRoot(true);
         jPanel2.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
 
         jLabel1.setText("Nome:");
@@ -161,13 +171,30 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
 
         jLabel4.setText("Preço:");
 
+        txtName.setFocusCycleRoot(true);
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameActionPerformed(evt);
             }
         });
 
-        txtPrice.setText("$");
+        txtCode.setFocusCycleRoot(true);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alimentos", "Bebidas", "Limpeza", "Diversos" }));
+        jComboBox1.setFocusCycleRoot(true);
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+
+        txtPrice.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        txtPrice.setFocusCycleRoot(true);
+        txtPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPriceActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -177,16 +204,20 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
                 .addGap(34, 34, 34)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtName)
+                    .addComponent(txtCode)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtPrice))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addGap(0, 559, Short.MAX_VALUE))
-                    .addComponent(txtCode)
-                    .addComponent(txtCategory)
-                    .addComponent(txtPrice))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 491, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -201,14 +232,14 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtCategory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -271,10 +302,18 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
     private void btnNew1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNew1ActionPerformed
         txtName.setEnabled(true);
         txtCode.setEnabled(true);
-        txtCategory.setEnabled(true);
+        //txtCategory.setEnabled(true);
         txtPrice.setEnabled(true);
         btnRegister.setEnabled(true);
     }//GEN-LAST:event_btnNew1ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void txtPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPriceActionPerformed
 
     /**
      * @param args the command line arguments
@@ -319,6 +358,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -327,9 +367,8 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JTextField txtCategory;
     private javax.swing.JTextField txtCode;
     private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtPrice;
+    private javax.swing.JFormattedTextField txtPrice;
     // End of variables declaration//GEN-END:variables
 }
