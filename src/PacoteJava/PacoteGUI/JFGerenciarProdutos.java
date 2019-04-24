@@ -309,6 +309,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         txtPrice.setEnabled(false);
         cboxCategory.setEnabled(false);
         btnRegister.setEnabled(false);
+        btnChange.setEnabled(true);
         btnNew1.setEnabled(true);
         
                            
