@@ -23,6 +23,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         txtCode.setEnabled(false);
         //txtCategory.setEnabled(false);
         txtPrice.setEnabled(false);
+        cboxCategory.setEnabled(false);
     }
 
     /**
@@ -37,7 +38,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jPanel4 = new javax.swing.JPanel();
         btnRegister = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnChange = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
@@ -50,7 +51,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
         txtCode = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cboxCategory = new javax.swing.JComboBox<>();
         txtPrice = new javax.swing.JFormattedTextField();
 
         jRadioButton1.setText("jRadioButton1");
@@ -72,9 +73,14 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setMnemonic('A');
-        jButton2.setText("Alterar");
-        jButton2.setFocusCycleRoot(true);
+        btnChange.setMnemonic('A');
+        btnChange.setText("Alterar");
+        btnChange.setFocusCycleRoot(true);
+        btnChange.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnChangeActionPerformed(evt);
+            }
+        });
 
         jButton3.setMnemonic('E');
         jButton3.setText("Excluir");
@@ -117,7 +123,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnChange, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -132,7 +138,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(btnRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnChange, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -180,11 +186,11 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
 
         txtCode.setFocusCycleRoot(true);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alimentos", "Bebidas", "Limpeza", "Diversos" }));
-        jComboBox1.setFocusCycleRoot(true);
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        cboxCategory.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alimentos", "Bebidas", "Limpeza", "Diversos" }));
+        cboxCategory.setFocusCycleRoot(true);
+        cboxCategory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                cboxCategoryActionPerformed(evt);
             }
         });
 
@@ -221,7 +227,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(cboxCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 491, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -239,7 +245,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cboxCategory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -297,7 +303,15 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         
         JOptionPane.showMessageDialog(null, "Produto: " + produto +"\n"+ "Código do Produto: " + code + "\n" + "Categoria: " + category +"\n" + "Preço: " + price);*/
         
+        btnRegister.setEnabled(false); 
+        txtName.setEnabled(false);
+        txtCode.setEnabled(false);
+        txtPrice.setEnabled(false);
+        cboxCategory.setEnabled(false);
+        btnRegister.setEnabled(false);
+        btnNew1.setEnabled(true);
         
+                           
     }//GEN-LAST:event_btnRegisterActionPerformed
 
     private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
@@ -309,16 +323,23 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         txtCode.setEnabled(true);
         //txtCategory.setEnabled(true);
         txtPrice.setEnabled(true);
+        cboxCategory.setEnabled(true);
         btnRegister.setEnabled(true);
+        btnChange.setEnabled(false);
+        btnNew1.setEnabled(false);
     }//GEN-LAST:event_btnNew1ActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    private void cboxCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboxCategoryActionPerformed
+        
+    }//GEN-LAST:event_cboxCategoryActionPerformed
 
     private void txtPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPriceActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPriceActionPerformed
+
+    private void btnChangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnChangeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -358,12 +379,12 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnChange;
     private javax.swing.JButton btnNew1;
     private javax.swing.JButton btnRegister;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox<String> cboxCategory;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
